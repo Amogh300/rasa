@@ -1,0 +1,64 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - tell_name
+  - skin_type
+  - skin_question
+
+entities:
+  - skinkind
+
+responses:
+  utter_greet:
+    - text: "Hey! How are you?"
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+  utter_name:
+    - text: "My name is Skin Care Chatbot."
+
+  utter_my_name:
+    - text: "What is your name?"
+
+  utter_mobile_number:
+    - text: "What is your mobile number?"
+
+  utter_thanks:
+    - text: "Thanks for providing the values."
+
+  utter_details_thanks:
+    - text: "Thanks for providing the given details \nName: {Name} \nMobile_Number: {Mobile_Number}."
+
+  utter_skin_question:
+    - text: "Descrbie your skin type."
+
+  utter_skin_url:
+    - text: "[{name}]({domain}{url})"
+
+actions:
+  - action_skin_care
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
